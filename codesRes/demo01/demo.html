@@ -2,33 +2,63 @@
 <html>
     <head>
         <title>Music Register</title>
+        <link type="text/css" rel="stylesheet" href="./common.css">
+        <link type="text/css" rel="stylesheet" href="./demo.css">
     </head>
     <body>
-        <header>
-            <div>
-                <img class="logo" src="./res/logo.svg">
-            </div>
-        </header>
+        <div class="page-wrap">
+            <header>
+                <div>
+                    <img class="logo" src="./res/logo.svg">
+                </div>
+            </header>
 
-        <div class="content">
-            <div class="form-wrap">
-                <form id="register">
-                    <div>Music Name:
-                        <input type="text" name="musicname">
+            <div class="content">
+                <div class="info-box">
+                    <div class="title">
+                        Register your account
                     </div>
-                    <div>Artist Name:
-                        <input type="text" name="artist">
+                    <div class="horizontal-line"></div>
+                    <div class="des">
+                        For optimal use of the Smart services, it is highly recommended to attend a Smart session: view our <a href="#">user manual</a>.
                     </div>
-                    <button type="submit">ADD</button>
-                    <button type="reset">reset</button>
-                </form>
-            </div>
+                    <div class="important-detail-box">
+                        <div class="detail-title">
+                            Important
+                        </div>
+                        <div class="info">
+                            You will receive your personal codes to access your "Smart account" (and to fill in your contracts) by email within 48 working hours of sending your registration documents. Do not hesitate to contact the nearest Smart office in case of emergency. 
+                            <br />
+                            Remember to always declare your working days in advance. Backdating your services is not allowed.
+                        </div>
+                    </div>
+                </div>
 
-            <div class="list-wrap">
-                <div id="listbox">
-                    <div class="item-wrap">
-                        <div class="music"> Spin Around</div>
-                        <div class="artist"> Unknown</div>
+                <div class="form-wrap">
+                    <form id="register" class="register">
+                        <div class="form-item">
+                            <div class="input-title">Music Name:</div>
+                            <input type="text" name="musicname">
+                        </div>
+                        <div class="form-item">
+                            <div class="input-title">Artist Name:</div>
+                            <input type="text" name="artist">
+                        </div>
+                        <button class="form-btn" type="submit">ADD</button>
+                        <button class="form-btn" type="reset">RESET</button>
+                    </form>
+                </div>
+                
+                <div class="title">
+                    Document
+                </div>
+                <div class="horizontal-line"></div>
+                <div class="list-wrap">
+                    <div id="listbox" class="listbox">
+                        <div class="item-wrap">
+                            <div class="music"> Spin Around</div>
+                            <div class="artist"> Unknown</div>
+                        </div>
                     </div>
                 </div>
             </div>
