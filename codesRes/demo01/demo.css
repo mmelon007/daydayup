@@ -20,17 +20,18 @@ header {
 
 .content {
     width: 800px;
+    margin-top: 40px;
 }
 
 .info-box {
-    height: 360px;
+    height: 40px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
 
 .title {
-    margin-top: 41px;
+    margin-top: 40px;
     font-family: Inter;
     font-size: 24px;
     font-weight: bold;
