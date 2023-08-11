@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Music Register</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <img class="logo" src="./res/logo.svg">
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="form-wrap">
+                <form id="register">
+                    <div>Music Name:
+                        <input type="text" name="musicname">
+                    </div>
+                    <div>Artist Name:
+                        <input type="text" name="artist">
+                    </div>
+                    <button type="submit">ADD</button>
+                    <button type="reset">reset</button>
+                </form>
+            </div>
+
+            <div class="list-wrap">
+                <div id="listbox">
+                    <div class="item-wrap">
+                        <div class="music"> Spin Around</div>
+                        <div class="artist"> Unknown</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function createSongDOM(name, artist){
+                let container = document.createElement('div');
+                container.className = "item-wrap";
+                let musicDiv = document.createElement('div');
+                musicDiv.className = "music";
+                musicDiv.innerHTML = name;
+                let artistDiv = document.createElement('div');
+                artistDiv.className = "artist";
+                artistDiv.innerHTML = artist;
+                container.append(musicDiv);
+                container.append(artistDiv);
+                return container;
+            }
+
+            function sortList(list) {
+                let itemArray = Array.from(list.children);
+                itemArray.sort((a , b) => a.firstElementChild.innerHTML.trim().localeCompare(b.firstElementChild.innerHTML.trim()));
+                list.append(...itemArray);
+            }
+
+            let musicForm = document.getElementById('register');
+            musicForm.addEventListener("submit", (ev) => {
+                ev.preventDefault();
+                // send message
+                let musicName = musicForm.elements.musicname.value;
+                let artist = musicForm.elements.artist.value;
+                let newNode = createSongDOM(musicName, artist);
+                listbox.append(newNode);
+                sortList(listbox);
+            });
+
+
+        </script>
+
+    </body>
+</html>
